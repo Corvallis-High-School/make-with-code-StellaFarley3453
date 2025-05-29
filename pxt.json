@@ -1,0 +1,14 @@
+{
+    "name": "10.2 Final project",
+    "version": "0.0.0",
+    "files": [
+        "main.ts"
+    ],
+    "supportedTargets": [
+        "arcade"
+    ],
+    "dependencies": {
+        "device": "*"
+    },
+    "testDependencies": {}
+}
