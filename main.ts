@@ -31,7 +31,7 @@ function compare() {
         }
     }
     if (cpuchoice == 0) {
-        sprites.create(assets.image`rockcpu`,SpriteKind.Enemy)
+        let cpu = sprites.create(assets.image`rockcpu`, SpriteKind.Enemy)
     }
 }
 // event handlers
