@@ -30,12 +30,15 @@ function compare() {
             countdown.destroy()
         }
     }
+    if (cpuchoice == 0) {
+        sprites.create(assets.image`rockcpu`,SpriteKind.Enemy)
+    }
 }
 // event handlers
 
 // main program
 setchoices()
-//fortune()
+fortune()
 compare()
 game.onUpdate(() => {
     // Code in this function will run once per frame. MakeCode
