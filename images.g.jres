@@ -94,5 +94,13 @@
         "namespace": "myImages.",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage"
+    },
+    "myImages.image13": {
+        "id": "myImages.image13",
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "dataEncoding": "base64",
+        "namespace": "myImages.",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage0"
     }
 }
