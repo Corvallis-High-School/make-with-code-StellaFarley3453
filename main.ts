@@ -6,6 +6,7 @@ let fortunenum: number = null
 let answer = ["Unclear, ask again.", "I'm not sure.", "Yeah, that'll go well.", "Signs point to yes.", "Most likely, yes.", "Proceed with caution.", "I have a bad feeling about this.", "Don't try it."]
 let countdownimages:Image[] = [assets.image`ROCK`,assets.image`PAPER`,assets.image`SCISSORS`,assets.image`GO`]
 let countdown:Sprite = sprites.create(assets.image`myImage`,SpriteKind.Projectile)
+let player:Sprite = null
 // functions
 function setchoices() {
     playerchoice = game.askForNumber("0 = rock, 1 = paper, 2 = scissors",1,false)
@@ -32,7 +33,49 @@ function compare() {
     }
     if (cpuchoice == 0) {
         let cpu = sprites.create(assets.image`rockcpu`, SpriteKind.Enemy)
+        cpu.x = 152
+        if (playerchoice == 0) {
+            player = sprites.create(assets.image`rockplayer`,SpriteKind.Player)
+        }
+        else {
+            if (playerchoice == 1) {
+                player = sprites.create(assets.image`paperplayer`,SpriteKind.Player)
+            }
+            else {
+                player = sprites.create(assets.image`scissorsplayer`, SpriteKind.Player)
+            }
+        }
     }
+    if (cpuchoice == 1) {
+        let cpu = sprites.create(assets.image`papercpu`, SpriteKind.Enemy)
+        cpu.x = 152
+        if (playerchoice == 0) {
+            player = sprites.create(assets.image`rockplayer`,SpriteKind.Player)
+        }
+        else {
+            if (playerchoice == 1) {
+                player = sprites.create(assets.image`paperplayer`,SpriteKind.Player)
+            }
+            else {
+                player = sprites.create(assets.image`scissorsplayer`, SpriteKind.Player)
+            }
+        }
+    }    if (cpuchoice == 2) {
+        let cpu = sprites.create(assets.image`scissorscpu`, SpriteKind.Enemy)
+        cpu.x = 152
+        if (playerchoice == 0) {
+            player = sprites.create(assets.image`rockplayer`,SpriteKind.Player)
+        }
+        else {
+            if (playerchoice == 1) {
+                player = sprites.create(assets.image`paperplayer`,SpriteKind.Player)
+            }
+            else {
+                player = sprites.create(assets.image`scissorsplayer`, SpriteKind.Player)
+            }
+        }
+    }
+    player.x = 8
 }
 // event handlers
 
