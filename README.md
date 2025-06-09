@@ -16,3 +16,5 @@ To play just enter 0 for rock, 1 for paper, or 2 for scissors, and then click th
 * I learned to use vscode and github together with makecode. Before, I had only used them each individually.
 * comitting regularly is important
 * comitting is not the same as releasing a new version
+## How to run the game
+Go to the primary page of the main branch, and copy the link at the top of the page. Then go to makecode arcade, click import, and paste the link in the box.
