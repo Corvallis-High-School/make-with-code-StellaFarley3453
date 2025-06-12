@@ -9,7 +9,8 @@ let countdown:Sprite = sprites.create(assets.image`myImage`,SpriteKind.Projectil
 let player: Sprite = null
 let winner: number = null
 let narrator = sprites.create(assets.image`myImage`, SpriteKind.Food)
-let results:String[] = ["you lose!","you win!","it's a tie!"]
+let results: String[] = ["you lose!", "you win!", "it's a tie!"]
+let playagain:boolean = true
 // functions
 function setchoices() {
     playerchoice = game.askForNumber("0 = rock, 1 = paper, 2 = scissors",1,false)
@@ -91,18 +92,24 @@ function compare() {
     narrator.sayText("you chose " + array[playerchoice] + ", the CPU chose " + array[cpuchoice] + ", this means " + results[winner])
     pause(5000)
     if (winner == 1) {
-        game.gameOver(true)
+        if (!game.ask("You win! play again?")) {
+            game.gameOver(true)
+        }
     }
     else {
-        game.gameOver(false)
+        if (!game.ask("You lose! play again?")) {
+            game.gameOver(false)
+        }
     }
 }
 // event handlers
 
 // main program
-setchoices()
-fortune()
-compare()
+while (playagain) {
+    setchoices()
+    fortune()
+    compare()
+}
 game.onUpdate(() => {
     // Code in this function will run once per frame. MakeCode
     // Arcade games run at 30 FPS
