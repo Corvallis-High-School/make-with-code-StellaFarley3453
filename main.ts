@@ -97,7 +97,7 @@ function compare() {
         }
     }
     else {
-        if (!game.ask("You lose! play again?")) {
+        if (!game.ask("You either lost or tied. play again?")) {
             game.gameOver(false)
         }
     }
