@@ -90,7 +90,7 @@ function compare() {
     }
     player.x = 8
     narrator.sayText("you chose " + array[playerchoice] + ", the CPU chose " + array[cpuchoice] + ", this means " + results[winner])
-    pause(5000)
+    pause(3000)
     if (winner == 1) {
         if (!game.ask("You win! play again?")) {
             game.gameOver(true)
